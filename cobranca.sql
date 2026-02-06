@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06/02/2026 às 14:54
+-- Tempo de geração: 06/02/2026 às 21:10
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -777,6 +777,14 @@ CREATE TABLE `cache` (
   `expiration` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Despejando dados para a tabela `cache`
+--
+
+INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
+('grupo-solucoes-gestao-cache-ju.osiqueira@gmail.com|127.0.0.1', 'i:2;', 1770403671),
+('grupo-solucoes-gestao-cache-ju.osiqueira@gmail.com|127.0.0.1:timer', 'i:1770403671;', 1770403671);
+
 -- --------------------------------------------------------
 
 --
@@ -1116,7 +1124,7 @@ CREATE TABLE `cobrancas` (
 
 INSERT INTO `cobrancas` (`id`, `created_at`, `updated_at`, `cliente_id`, `conta_financeira_id`, `boleto_id`, `descricao`, `valor`, `juros_multa`, `data_vencimento`, `status`, `user_id`, `tipo`, `pago_em`, `data_pagamento`, `deleted_at`, `orcamento_id`, `conta_fixa_id`, `origem`, `forma_pagamento`, `parcela_num`, `parcelas_total`) VALUES
 (9, '2026-01-26 15:10:00', '2026-02-06 11:34:56', 22, 1, NULL, 'Cobrança do orçamento 001/2026', 2085.65, 0.00, '2026-02-02', 'pago', 1, 'orcamento', '2026-02-02 03:00:00', '2026-02-02', NULL, 3, NULL, 'CONTRATO', 'pix', NULL, NULL),
-(10, '2026-01-26 15:10:14', '2026-01-26 15:10:14', 22, NULL, NULL, 'Cobrança do orçamento 002/2026', 990.00, 0.00, '2026-02-02', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 4, NULL, 'CONTRATO', NULL, NULL, NULL),
+(10, '2026-01-26 15:10:14', '2026-02-06 14:01:28', 22, 1, NULL, 'Cobrança do orçamento 002/2026', 990.00, 0.00, '2026-02-02', 'pago', 1, 'orcamento', '2026-02-06 03:00:00', '2026-02-06', NULL, 4, NULL, 'CONTRATO', 'pix', NULL, NULL),
 (11, '2026-01-26 15:10:20', '2026-02-06 11:34:56', 22, 1, NULL, 'Cobrança do orçamento 003/2026', 1039.90, 0.00, '2026-02-02', 'pago', 1, 'orcamento', '2026-02-02 03:00:00', '2026-02-02', NULL, 5, NULL, 'CONTRATO', 'pix', NULL, NULL),
 (12, '2026-01-26 15:13:31', '2026-01-26 15:13:31', 23, NULL, NULL, 'Cobrança do orçamento 008/2026', 280.00, 0.00, '2026-02-02', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 21, NULL, 'CONTRATO', NULL, NULL, NULL),
 (13, '2026-01-26 15:13:36', '2026-02-05 13:50:41', 24, NULL, NULL, 'Cobrança do orçamento 009/2026', 300.00, 0.00, '2026-02-02', 'pendente', NULL, 'orcamento', NULL, NULL, '2026-02-05 13:50:41', 22, NULL, 'CONTRATO', NULL, NULL, NULL),
@@ -1127,8 +1135,8 @@ INSERT INTO `cobrancas` (`id`, `created_at`, `updated_at`, `cliente_id`, `conta_
 (18, '2026-01-26 19:16:44', '2026-02-06 11:34:56', 55, 2, NULL, 'Cobrança do orçamento 015/2026', 560.00, 0.00, '2026-02-02', 'pago', 1, 'orcamento', '2026-02-02 03:00:00', '2026-02-02', NULL, 52, NULL, 'CONTRATO', 'pix', NULL, NULL),
 (19, '2026-01-27 00:31:06', '2026-01-28 20:41:43', 18, NULL, NULL, 'Cobrança do orçamento 002/2026', 8000.00, 0.00, '2026-02-02', 'pendente', NULL, 'orcamento', NULL, NULL, '2026-01-28 20:41:43', 1, NULL, 'CONTRATO', NULL, NULL, NULL),
 (20, '2026-01-27 11:42:27', '2026-02-06 11:34:56', 59, 2, NULL, 'Cobrança do orçamento 020/2026', 240.00, 0.00, '2026-02-03', 'pago', 1, 'orcamento', '2026-01-29 03:00:00', '2026-01-29', NULL, 60, NULL, 'CONTRATO', 'pix', NULL, NULL),
-(21, '2026-01-27 12:05:12', '2026-01-27 12:05:12', 56, NULL, NULL, 'Cobrança do orçamento 022/2026', 160.00, 0.00, '2026-02-03', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 62, NULL, 'CONTRATO', NULL, NULL, NULL),
-(22, '2026-01-27 12:05:18', '2026-01-27 12:05:18', 56, NULL, NULL, 'Cobrança do orçamento 021/2026', 450.00, 0.00, '2026-02-03', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 61, NULL, 'CONTRATO', NULL, NULL, NULL),
+(21, '2026-01-27 12:05:12', '2026-02-06 17:32:25', 56, 2, NULL, 'Cobrança do orçamento 022/2026', 160.00, 0.00, '2026-02-03', 'pago', 1, 'orcamento', '2026-02-06 03:00:00', '2026-02-06', NULL, 62, NULL, 'CONTRATO', 'pix', NULL, NULL),
+(22, '2026-01-27 12:05:18', '2026-02-06 17:32:33', 56, 2, NULL, 'Cobrança do orçamento 021/2026', 450.00, 0.00, '2026-02-03', 'pago', 1, 'orcamento', '2026-02-06 03:00:00', '2026-02-06', NULL, 61, NULL, 'CONTRATO', 'pix', NULL, NULL),
 (23, '2026-01-27 12:13:14', '2026-02-05 12:26:53', 45, NULL, NULL, 'Cobrança do orçamento 016/2026', 586.58, 0.00, '2026-02-03', 'pendente', NULL, 'orcamento', NULL, NULL, '2026-02-05 12:26:53', 53, NULL, 'CONTRATO', NULL, NULL, NULL),
 (24, '2026-01-27 21:10:26', '2026-01-27 21:38:50', 63, NULL, NULL, 'Cobrança do orçamento 015/2026', 229.90, 0.00, '2026-02-03', 'pendente', NULL, 'orcamento', NULL, NULL, '2026-01-27 21:38:50', 63, NULL, 'CONTRATO', NULL, NULL, NULL),
 (25, '2026-01-28 01:47:48', '2026-02-06 11:34:56', 54, 3, NULL, 'Orçamento 013/2026', 250.00, 0.00, '2026-01-27', 'pago', 1, 'orcamento', '2026-01-28 14:13:12', NULL, NULL, 56, NULL, 'CONTRATO', 'pix', 1, 1),
@@ -5741,12 +5749,12 @@ INSERT INTO `cobrancas` (`id`, `created_at`, `updated_at`, `cliente_id`, `conta_
 (4614, '2026-02-01 22:06:32', '2026-02-01 22:06:32', 13, NULL, NULL, 'Orçamento 021/2026 - Parcela 2/2', 1049.63, 0.00, '2026-02-08', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 78, NULL, 'CONTRATO', 'boleto', 2, 2),
 (4615, '2026-02-01 22:08:12', '2026-02-06 11:34:56', 18, 3, NULL, 'Orçamento 022/2026', 180.00, 0.00, '2026-02-01', 'pago', 1, 'orcamento', '2026-01-08 03:00:00', '2026-01-08', NULL, 79, NULL, 'CONTRATO', 'pix', 1, 1),
 (4616, '2026-02-02 10:02:45', '2026-02-06 11:34:56', 23, 2, NULL, 'Orçamento 027/2026', 280.00, 0.00, '2026-02-02', 'pago', 1, 'orcamento', '2026-01-09 03:00:00', '2026-01-09', NULL, 80, NULL, 'CONTRATO', 'pix', 1, 1),
-(4617, '2026-02-02 10:24:29', '2026-02-02 10:24:29', 22, NULL, NULL, 'Orçamento 005/2026 - Parcela 1/1', 4800.00, 0.00, '2026-02-02', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 7, NULL, 'CONTRATO', 'faturado', 1, 1),
+(4617, '2026-02-02 10:24:29', '2026-02-06 14:01:18', 22, 1, NULL, 'Orçamento 005/2026 - Parcela 1/1', 4800.00, 0.00, '2026-02-02', 'pago', 1, 'orcamento', '2026-02-06 03:00:00', '2026-02-06', NULL, 7, NULL, 'CONTRATO', 'pix', 1, 1),
 (4619, '2026-02-02 16:36:24', '2026-02-02 16:36:24', 23, NULL, NULL, 'Orçamento 030/2026', 280.00, 0.00, '2026-02-02', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 85, NULL, 'CONTRATO', 'pix', 1, 1),
 (4620, '2026-02-02 16:38:31', '2026-02-02 16:38:31', 41, NULL, NULL, 'Orçamento 017/2026', 2600.00, 0.00, '2026-02-02', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 87, NULL, 'CONTRATO', 'pix', 1, 1),
 (4621, '2026-02-02 16:38:35', '2026-02-02 16:38:35', 40, NULL, NULL, 'Orçamento 016/2026', 1500.00, 0.00, '2026-02-02', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 86, NULL, 'CONTRATO', 'pix', 1, 1),
 (4622, '2026-02-02 16:43:28', '2026-02-06 03:13:53', 24, NULL, NULL, 'Orçamento 031/2026', 300.00, 0.00, '2026-02-02', 'pendente', NULL, 'orcamento', NULL, '2026-02-06', NULL, 88, NULL, 'CONTRATO', 'pix', 1, 1),
-(4623, '2026-02-02 16:45:18', '2026-02-02 16:45:18', 43, NULL, NULL, 'Orçamento 018/2026', 27917.25, 0.00, '2026-02-02', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 89, NULL, 'CONTRATO', 'pix', 1, 1),
+(4623, '2026-02-02 16:45:18', '2026-02-06 17:34:29', 43, NULL, NULL, 'Orçamento 018/2026', 27917.25, 0.00, '2026-02-02', 'pendente', NULL, 'orcamento', NULL, NULL, '2026-02-06 17:34:29', 89, NULL, 'CONTRATO', 'pix', 1, 1),
 (4624, '2026-02-02 19:34:13', '2026-02-06 11:34:56', 45, 2, NULL, 'Orçamento 032/2026', 560.00, 0.00, '2026-02-02', 'pago', 1, 'orcamento', '2026-02-02 03:00:00', '2026-02-02', NULL, 90, NULL, 'CONTRATO', 'pix', 1, 1),
 (4625, '2026-02-03 16:56:58', '2026-02-06 11:34:56', 85, 3, NULL, 'Orçamento 016/2026', 180.00, 0.00, '2026-02-03', 'pago', 1, 'orcamento', '2026-02-03 03:00:00', '2026-02-03', NULL, 64, NULL, 'CONTRATO', 'pix', 1, 1),
 (4626, '2026-02-03 23:45:36', '2026-02-03 23:45:36', 28, NULL, NULL, 'Orçamento 007/2026', 4620.00, 0.00, '2026-02-03', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 9, NULL, 'CONTRATO', 'pix', 1, 1),
@@ -5766,7 +5774,7 @@ INSERT INTO `cobrancas` (`id`, `created_at`, `updated_at`, `cliente_id`, `conta_
 (4640, '2026-02-04 00:04:26', '2026-02-04 00:04:45', 84, NULL, NULL, 'Orçamento 020/2026 - Parcela 3/5', 8023.07, 0.00, '2026-04-05', 'pendente', NULL, 'orcamento', NULL, NULL, '2026-02-04 00:04:45', 74, NULL, 'CONTRATO', 'boleto', 3, 5),
 (4641, '2026-02-04 00:04:26', '2026-02-04 00:04:45', 84, NULL, NULL, 'Orçamento 020/2026 - Parcela 4/5', 8023.07, 0.00, '2026-05-05', 'pendente', NULL, 'orcamento', NULL, NULL, '2026-02-04 00:04:45', 74, NULL, 'CONTRATO', 'boleto', 4, 5),
 (4642, '2026-02-04 00:04:26', '2026-02-04 00:04:45', 84, NULL, NULL, 'Orçamento 020/2026 - Parcela 5/5', 8023.07, 0.00, '2026-06-04', 'pendente', NULL, 'orcamento', NULL, NULL, '2026-02-04 00:04:45', 74, NULL, 'CONTRATO', 'boleto', 5, 5),
-(4643, '2026-02-04 00:21:17', '2026-02-04 00:21:17', 61, NULL, NULL, 'Orçamento 029/2026', 957.00, 0.00, '2026-02-03', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 83, NULL, 'CONTRATO', 'pix', 1, 1),
+(4643, '2026-02-04 00:21:17', '2026-02-06 18:08:23', 61, 2, NULL, 'Orçamento 029/2026', 957.00, 0.00, '2026-02-03', 'pago', 1, 'orcamento', '2026-02-06 03:00:00', '2026-02-06', NULL, 83, NULL, 'CONTRATO', 'pix', 1, 1),
 (4644, '2026-02-04 00:30:06', '2026-02-04 00:30:06', 84, NULL, NULL, 'Orçamento 020/2026 - Parcela 1/5', 15000.00, 0.00, '2026-02-06', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 74, NULL, 'CONTRATO', 'boleto', 1, 5),
 (4645, '2026-02-04 00:30:06', '2026-02-04 00:30:06', 84, NULL, NULL, 'Orçamento 020/2026 - Parcela 2/5', 6278.84, 0.00, '2026-03-06', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 74, NULL, 'CONTRATO', 'boleto', 2, 5),
 (4646, '2026-02-04 00:30:06', '2026-02-04 00:30:06', 84, NULL, NULL, 'Orçamento 020/2026 - Parcela 3/5', 6278.84, 0.00, '2026-04-06', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 74, NULL, 'CONTRATO', 'boleto', 3, 5),
@@ -5895,7 +5903,17 @@ INSERT INTO `cobrancas` (`id`, `created_at`, `updated_at`, `cliente_id`, `conta_
 (4768, '2026-02-05 14:33:05', '2026-02-05 14:33:05', 67, 3, NULL, 'Contratos - Contrato Catraca + Sistema', 430.92, 0.00, '2035-10-20', 'pendente', NULL, 'contrato', NULL, NULL, NULL, NULL, 40, 'CONTRATO', 'boleto', NULL, NULL),
 (4769, '2026-02-05 14:33:05', '2026-02-05 14:33:05', 67, 3, NULL, 'Contratos - Contrato Catraca + Sistema', 430.92, 0.00, '2035-11-20', 'pendente', NULL, 'contrato', NULL, NULL, NULL, NULL, 40, 'CONTRATO', 'boleto', NULL, NULL),
 (4770, '2026-02-05 14:33:05', '2026-02-05 14:33:05', 67, 3, NULL, 'Contratos - Contrato Catraca + Sistema', 430.92, 0.00, '2035-12-20', 'pendente', NULL, 'contrato', NULL, NULL, NULL, NULL, 40, 'CONTRATO', 'boleto', NULL, NULL),
-(4771, '2026-02-05 14:33:05', '2026-02-05 14:33:05', 67, 3, NULL, 'Contratos - Contrato Catraca + Sistema', 430.92, 0.00, '2036-01-20', 'pendente', NULL, 'contrato', NULL, NULL, NULL, NULL, 40, 'CONTRATO', 'boleto', NULL, NULL);
+(4771, '2026-02-05 14:33:05', '2026-02-05 14:33:05', 67, 3, NULL, 'Contratos - Contrato Catraca + Sistema', 430.92, 0.00, '2036-01-20', 'pendente', NULL, 'contrato', NULL, NULL, NULL, NULL, 40, 'CONTRATO', 'boleto', NULL, NULL),
+(4772, '2026-02-06 14:38:50', '2026-02-06 14:39:13', 66, 3, NULL, 'Orçamento 014/2026 - Parcela 1/3', 284.33, 0.00, '2026-02-06', 'pago', 1, 'orcamento', '2026-02-06 03:00:00', '2026-02-06', NULL, 57, NULL, 'CONTRATO', 'pix', 1, 3),
+(4773, '2026-02-06 14:38:50', '2026-02-06 14:38:50', 66, NULL, NULL, 'Orçamento 014/2026 - Parcela 2/3', 284.33, 0.00, '2026-03-05', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 57, NULL, 'CONTRATO', 'boleto', 2, 3),
+(4774, '2026-02-06 14:38:50', '2026-02-06 14:38:50', 66, NULL, NULL, 'Orçamento 014/2026 - Parcela 3/3', 284.34, 0.00, '2026-04-05', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 57, NULL, 'CONTRATO', 'boleto', 3, 3),
+(4775, '2026-02-06 14:47:41', '2026-02-06 14:47:41', 59, NULL, NULL, 'Orçamento 040/2026', 250.00, 0.00, '2026-02-06', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 106, NULL, 'CONTRATO', 'pix', 1, 1),
+(4776, '2026-02-06 14:48:00', '2026-02-06 14:48:16', 86, 3, NULL, 'Orçamento 026/2026 - Parcela 1/2', 1050.00, 0.00, '2026-02-06', 'pago', 1, 'orcamento', '2026-02-05 03:00:00', '2026-02-05', NULL, 98, NULL, 'CONTRATO', 'pix', 1, 2),
+(4777, '2026-02-06 14:48:00', '2026-02-06 14:48:00', 86, NULL, NULL, 'Orçamento 026/2026 - Parcela 2/2', 1000.00, 0.00, '2026-03-05', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 98, NULL, 'CONTRATO', 'boleto', 2, 2),
+(4778, '2026-02-06 15:02:06', '2026-02-06 17:13:25', 43, NULL, NULL, 'Orçamento 037/2026 - Parcela 1/1', 6058.30, 0.00, '2026-02-09', 'pendente', NULL, 'orcamento', NULL, NULL, '2026-02-06 17:13:25', 100, NULL, 'CONTRATO', 'faturado', 1, 1),
+(4779, '2026-02-06 17:14:38', '2026-02-06 17:14:38', 43, NULL, NULL, 'Orçamento 037/2026 - Parcela 1/1', 5507.55, 0.00, '2026-02-10', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 100, NULL, 'CONTRATO', 'faturado', 1, 1),
+(4780, '2026-02-06 17:34:53', '2026-02-06 17:35:10', 43, 1, NULL, 'Orçamento 018/2026 - Parcela 1/2', 13958.63, 0.00, '2026-02-06', 'pago', 1, 'orcamento', '2026-02-06 03:00:00', '2026-02-06', NULL, 89, NULL, 'CONTRATO', 'pix', 1, 2),
+(4781, '2026-02-06 17:34:53', '2026-02-06 17:34:53', 43, NULL, NULL, 'Orçamento 018/2026 - Parcela 2/2', 13958.62, 0.00, '2026-02-15', 'pendente', NULL, 'orcamento', NULL, NULL, NULL, 89, NULL, 'CONTRATO', 'boleto', 2, 2);
 
 -- --------------------------------------------------------
 
@@ -5981,7 +5999,9 @@ INSERT INTO `cobranca_anexos` (`id`, `cobranca_id`, `tipo`, `nome_original`, `no
 (59, 4643, 'nf', '260 - NFS-e - VITTACAR COMERCIO.pdf', '1770164518_6982912693a33_260_-_NFS-e_-_VITTACAR_COMERCIO.pdf', 'cobrancas/anexos/1770164518_6982912693a33_260_-_NFS-e_-_VITTACAR_COMERCIO.pdf', 72317, '2026-02-04 00:21:58', '2026-02-04 00:21:58'),
 (60, 4644, 'nf', '251 - NFS-e - JARAGUA TENIS CLUBE.pdf', '1770165044_69829334cf99c_251_-_NFS-e_-_JARAGUA_TENIS_CLUBE.pdf', 'cobrancas/anexos/1770165044_69829334cf99c_251_-_NFS-e_-_JARAGUA_TENIS_CLUBE.pdf', 152150, '2026-02-04 00:30:44', '2026-02-04 00:30:44'),
 (61, 4644, 'boleto', 'boleto  -JARAGUA TENIS CLUBE.pdf', '1770165060_69829344d3acc_boleto__-JARAGUA_TENIS_CLUBE.pdf', 'cobrancas/anexos/1770165060_69829344d3acc_boleto__-JARAGUA_TENIS_CLUBE.pdf', 80676, '2026-02-04 00:31:00', '2026-02-04 00:31:00'),
-(62, 4652, 'boleto', 'boleto - ACADEMIA V-FORCE  - 02.2026.pdf', '1770302016_6984aa4013a6f_boleto_-_ACADEMIA_V-FORCE__-_02.2026.pdf', 'cobrancas/anexos/1770302016_6984aa4013a6f_boleto_-_ACADEMIA_V-FORCE__-_02.2026.pdf', 50463, '2026-02-05 14:33:36', '2026-02-05 14:33:36');
+(62, 4652, 'boleto', 'boleto - ACADEMIA V-FORCE  - 02.2026.pdf', '1770302016_6984aa4013a6f_boleto_-_ACADEMIA_V-FORCE__-_02.2026.pdf', 'cobrancas/anexos/1770302016_6984aa4013a6f_boleto_-_ACADEMIA_V-FORCE__-_02.2026.pdf', 50463, '2026-02-05 14:33:36', '2026-02-05 14:33:36'),
+(63, 4778, 'nf', 'NFSe 252 - VD CACHOEIRO.pdf', '1770391465_698607a9a290f_NFSe_252_-_VD_CACHOEIRO.pdf', 'cobrancas/anexos/1770391465_698607a9a290f_NFSe_252_-_VD_CACHOEIRO.pdf', 56129, '2026-02-06 15:24:25', '2026-02-06 15:24:25'),
+(64, 4779, 'nf', '253 - NFS-e - VD CACHOEIRO.pdf', '1770398802_69862452e7e11_253_-_NFS-e_-_VD_CACHOEIRO.pdf', 'cobrancas/anexos/1770398802_69862452e7e11_253_-_NFS-e_-_VD_CACHOEIRO.pdf', 56128, '2026-02-06 17:26:42', '2026-02-06 17:26:42');
 
 -- --------------------------------------------------------
 
@@ -6073,9 +6093,9 @@ CREATE TABLE `contas_financeiras` (
 --
 
 INSERT INTO `contas_financeiras` (`id`, `empresa_id`, `nome`, `tipo`, `limite_credito`, `limite_credito_utilizado`, `limite_cheque_especial`, `limite_cheque_especial_utilizado`, `saldo`, `saldo_total`, `ativo`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 1, 'DELTA - SICOOB', 'corrente', 3500.00, 765.00, 500.00, 0.00, 464.25, 0.00, 1, '2026-01-27 15:06:03', '2026-02-05 17:32:05', NULL),
-(2, 2, 'GW - SICOOB', 'corrente', 0.00, 0.00, 3000.00, 0.00, 2337.22, 0.00, 1, '2026-01-27 15:06:41', '2026-02-06 03:13:53', NULL),
-(3, 3, 'INVEST - SICOOB', 'corrente', 0.00, 0.00, 1944.00, 0.00, 710.73, 0.00, 1, '2026-01-27 15:07:17', '2026-02-06 13:52:22', NULL),
+(1, 1, 'DELTA - SICOOB', 'corrente', 3500.00, 765.00, 500.00, 0.00, 20120.98, 0.00, 1, '2026-01-27 15:06:03', '2026-02-06 17:49:17', NULL),
+(2, 2, 'GW - SICOOB', 'corrente', 0.00, 0.00, 3000.00, 0.00, 1672.82, 0.00, 1, '2026-01-27 15:06:41', '2026-02-06 19:00:00', NULL),
+(3, 3, 'INVEST - SICOOB', 'corrente', 0.00, 0.00, 1944.00, 0.00, 1045.06, 0.00, 1, '2026-01-27 15:07:17', '2026-02-06 18:57:41', NULL),
 (4, 1, 'GRUPO - INTER', 'poupanca', 0.00, 0.00, 0.00, 0.00, 7536.32, 0.00, 1, '2026-01-27 15:07:56', '2026-01-28 23:39:51', NULL);
 
 -- --------------------------------------------------------
@@ -6529,7 +6549,7 @@ INSERT INTO `contas_pagar` (`id`, `centro_custo_id`, `conta_id`, `conta_financei
 (247, 1, 7, NULL, NULL, 17, 41, 'TRIMESTRAL - 17/01/2026', 500.00, 0.00, '2026-01-17', NULL, NULL, NULL, 'pago', 1, 'fixa', '2026-01-31 16:32:24', '2026-01-17', 'PIX', NULL, '2026-01-31 12:57:02', '2026-02-06 11:34:56', NULL),
 (248, 1, 7, NULL, NULL, 17, 41, 'TRIMESTRAL - 24/01/2026', 500.00, 0.00, '2026-01-24', NULL, NULL, NULL, 'pago', 1, 'fixa', '2026-01-31 16:32:24', '2026-01-24', 'PIX', NULL, '2026-01-31 12:57:02', '2026-02-06 11:34:56', NULL),
 (249, 1, 7, NULL, NULL, 17, 41, 'TRIMESTRAL - 31/01/2026', 500.00, 0.00, '2026-01-31', NULL, NULL, NULL, 'pago', 1, 'fixa', '2026-01-31 16:32:24', '2026-01-31', 'PIX', NULL, '2026-01-31 12:57:02', '2026-02-06 11:34:56', NULL),
-(250, 1, 7, NULL, NULL, 17, 41, 'TRIMESTRAL - 07/02/2026', 500.00, 0.00, '2026-02-07', NULL, NULL, NULL, 'em_aberto', NULL, 'fixa', NULL, NULL, 'PIX', NULL, '2026-01-31 12:57:02', '2026-01-31 12:57:02', NULL),
+(250, 1, 7, 2, NULL, 17, 41, 'TRIMESTRAL - 07/02/2026', 500.00, 0.00, '2026-02-07', NULL, NULL, NULL, 'pago', NULL, 'fixa', '2026-02-06 00:00:00', '2026-02-06', 'pix', NULL, '2026-01-31 12:57:02', '2026-02-06 19:00:00', NULL),
 (251, 1, 7, NULL, NULL, 17, 41, 'TRIMESTRAL - 14/02/2026', 500.00, 0.00, '2026-02-14', NULL, NULL, NULL, 'em_aberto', NULL, 'fixa', NULL, NULL, 'PIX', NULL, '2026-01-31 12:57:02', '2026-01-31 12:57:02', NULL),
 (252, 1, 7, NULL, NULL, 17, 41, 'TRIMESTRAL - 21/02/2026', 500.00, 0.00, '2026-02-21', NULL, NULL, NULL, 'em_aberto', NULL, 'fixa', NULL, NULL, 'PIX', NULL, '2026-01-31 12:57:02', '2026-01-31 12:57:02', NULL),
 (253, 1, 7, NULL, NULL, 17, 41, 'TRIMESTRAL - 28/02/2026', 500.00, 0.00, '2026-02-28', NULL, NULL, NULL, 'em_aberto', NULL, 'fixa', NULL, NULL, 'PIX', NULL, '2026-01-31 12:57:02', '2026-01-31 12:57:02', NULL),
@@ -7055,7 +7075,7 @@ INSERT INTO `contas_pagar` (`id`, `centro_custo_id`, `conta_id`, `conta_financei
 (771, 3, 39, 1, NULL, NULL, 68, 'LEROY', 78.00, 0.00, '2026-01-08', NULL, NULL, NULL, 'pago', 1, 'avulsa', '2026-01-08 00:00:00', '2026-01-08', 'pix', NULL, '2026-02-01 17:26:32', '2026-02-06 11:34:56', NULL),
 (772, 3, 26, 1, NULL, NULL, 70, 'EPI', 63.80, 0.00, '2026-01-08', NULL, NULL, NULL, 'pago', 1, 'avulsa', '2026-01-08 00:00:00', '2026-01-08', 'pix', NULL, '2026-02-01 17:27:00', '2026-02-06 11:34:56', NULL),
 (773, 4, 41, 2, NULL, NULL, 69, 'UBER MATERIAL VITOR', 27.71, 0.00, '2026-01-08', NULL, NULL, NULL, 'pago', 1, 'avulsa', '2026-01-08 00:00:00', '2026-01-08', 'pix', NULL, '2026-02-01 17:27:32', '2026-02-06 11:34:56', NULL),
-(774, 1, 7, NULL, NULL, 52, 40, 'TRIMESTRAL - 07/02/2026', 500.00, 0.00, '2026-02-07', NULL, NULL, NULL, 'em_aberto', NULL, 'fixa', NULL, NULL, 'PIX', NULL, '2026-02-02 10:24:24', '2026-02-02 10:24:24', NULL),
+(774, 1, 7, 2, NULL, 52, 40, 'TRIMESTRAL - 07/02/2026', 500.00, 0.00, '2026-02-07', NULL, NULL, NULL, 'pago', NULL, 'fixa', '2026-02-06 00:00:00', '2026-02-06', 'pix', NULL, '2026-02-02 10:24:24', '2026-02-06 18:59:47', NULL),
 (775, 1, 7, NULL, NULL, 52, 40, 'TRIMESTRAL - 14/02/2026', 500.00, 0.00, '2026-02-14', NULL, NULL, NULL, 'em_aberto', NULL, 'fixa', NULL, NULL, 'PIX', NULL, '2026-02-02 10:24:24', '2026-02-02 10:24:24', NULL),
 (776, 1, 7, NULL, NULL, 52, 40, 'TRIMESTRAL - 21/02/2026', 500.00, 0.00, '2026-02-21', NULL, NULL, NULL, 'em_aberto', NULL, 'fixa', NULL, NULL, 'PIX', NULL, '2026-02-02 10:24:24', '2026-02-02 10:24:24', NULL),
 (777, 1, 7, NULL, NULL, 52, 40, 'TRIMESTRAL - 28/02/2026', 500.00, 0.00, '2026-02-28', NULL, NULL, NULL, 'em_aberto', NULL, 'fixa', NULL, NULL, 'PIX', NULL, '2026-02-02 10:24:24', '2026-02-02 10:24:24', NULL),
@@ -7257,8 +7277,22 @@ INSERT INTO `contas_pagar` (`id`, `centro_custo_id`, `conta_id`, `conta_financei
 (972, 3, 40, 1, 10, NULL, 75, 'QUARTA FEIRA DIA 04/02 ORÇ 008/2026', 150.00, 0.00, '2026-02-15', NULL, NULL, NULL, 'em_aberto', NULL, 'avulsa', NULL, NULL, 'PIX', NULL, '2026-02-05 18:13:40', '2026-02-05 18:13:40', NULL),
 (973, 3, 40, 1, 10, NULL, 100, 'QUINTA FEIRA DIA 05/02 ORÇ 008/2026', 225.00, 0.00, '2026-02-15', NULL, NULL, NULL, 'em_aberto', NULL, 'avulsa', NULL, NULL, 'PIX', NULL, '2026-02-05 18:14:33', '2026-02-05 18:14:33', NULL),
 (974, 3, 40, 1, 10, NULL, 75, 'QUINTA FEIRA DIA 05/02 ORÇ 008/2026', 150.00, 0.00, '2026-02-15', NULL, NULL, NULL, 'em_aberto', NULL, 'avulsa', NULL, NULL, 'PIX', NULL, '2026-02-05 18:15:03', '2026-02-05 18:15:03', NULL),
-(975, 2, 24, 3, 98, NULL, 104, 'MATERIAL ACADEMIA', 976.86, 0.00, '2026-02-05', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-06 00:00:00', '2026-02-06', 'pix', NULL, '2026-02-06 12:45:54', '2026-02-06 12:47:06', NULL),
-(976, 2, 13, 3, NULL, NULL, 62, 'INVEST', 3.60, 0.00, '2026-02-05', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-05 00:00:00', '2026-02-05', 'pix', NULL, '2026-02-06 12:57:33', '2026-02-06 12:57:56', NULL);
+(975, 2, 24, 3, 98, NULL, 104, 'MATERIAL ACADEMIA', 976.86, 0.00, '2026-02-05', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-05 00:00:00', '2026-02-05', 'pix', NULL, '2026-02-06 12:45:54', '2026-02-06 17:58:07', NULL),
+(976, 2, 13, 3, NULL, NULL, 62, 'INVEST', 3.60, 0.00, '2026-02-05', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-05 00:00:00', '2026-02-05', 'pix', NULL, '2026-02-06 12:57:33', '2026-02-06 12:57:56', NULL),
+(977, 3, 27, 1, 10, NULL, 70, 'SOQUETE', 20.00, 0.00, '2026-02-05', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-05 00:00:00', '2026-02-05', 'pix', NULL, '2026-02-06 14:08:09', '2026-02-06 14:22:35', NULL),
+(978, 4, 24, 2, 93, NULL, 73, 'MATERIAL JEEP VITORIA', 30.00, 0.00, '2026-02-05', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-06 00:00:00', '2026-02-06', 'pix', NULL, '2026-02-06 14:09:32', '2026-02-06 14:22:49', NULL),
+(979, 4, 24, 2, 93, NULL, 73, 'MATERIAL USO JEEP VITORIA', 90.50, 0.00, '2026-02-05', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-05 00:00:00', '2026-02-05', 'pix', NULL, '2026-02-06 14:10:27', '2026-02-06 14:22:21', NULL),
+(980, 4, 40, 2, 93, NULL, 61, 'QUINTA FEIRA DIA 05/02 ORÇ 034/2026', 100.00, 0.00, '2026-02-15', NULL, NULL, NULL, 'em_aberto', NULL, 'avulsa', NULL, NULL, 'PIX', NULL, '2026-02-06 14:12:16', '2026-02-06 14:12:16', NULL),
+(981, 4, 39, 2, 93, NULL, 61, 'QUINTA FEIRA DIA 05/02 ORÇ 034/2026', 25.00, 0.00, '2026-02-06', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-06 00:00:00', '2026-02-06', 'pix', NULL, '2026-02-06 14:13:10', '2026-02-06 14:23:14', NULL),
+(982, 4, 39, 2, 93, NULL, 61, 'QUINTA FEIRA DIA 06/02 ORÇ 034/2026', 25.00, 0.00, '2026-02-06', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-05 00:00:00', '2026-02-05', 'pix', NULL, '2026-02-06 14:16:31', '2026-02-06 14:23:04', NULL),
+(983, 4, 40, 2, 93, NULL, 61, 'SEXTA FEIRA DIA 06/02 ORÇ 034/2026', 100.00, 0.00, '2026-02-15', NULL, NULL, NULL, 'em_aberto', NULL, 'avulsa', NULL, NULL, 'PIX', NULL, '2026-02-06 14:35:50', '2026-02-06 14:35:50', NULL),
+(984, 3, 40, 1, 10, NULL, 100, 'SEXTA FEIRA DIA 06/02 ORÇ 008/2026', 225.00, 0.00, '2026-02-15', NULL, NULL, NULL, 'em_aberto', NULL, 'avulsa', NULL, NULL, 'PIX', NULL, '2026-02-06 14:36:47', '2026-02-06 14:36:47', NULL),
+(985, 3, 40, 1, 10, NULL, 75, 'SEXTA FEIRA DIA 06/02 ORÇ 008/2026', 150.00, 0.00, '2026-02-15', NULL, NULL, NULL, 'em_aberto', NULL, 'avulsa', NULL, NULL, 'PIX', NULL, '2026-02-06 14:37:24', '2026-02-06 14:37:24', NULL),
+(986, 1, 39, 1, NULL, NULL, 68, 'WALLAS E FELIPE', 44.00, 0.00, '2026-02-06', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-06 00:00:00', '2026-02-06', 'pix', NULL, '2026-02-06 17:28:03', '2026-02-06 17:49:17', NULL),
+(987, 1, 21, 2, NULL, NULL, 40, 'COMBUSTIVEL', 60.90, 0.00, '2026-02-06', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-06 00:00:00', '2026-02-06', 'pix', NULL, '2026-02-06 17:30:10', '2026-02-06 17:49:01', NULL),
+(988, 3, 27, 1, 10, NULL, 70, 'BIT PARAFUSADEIRA', 27.90, 0.00, '2026-02-06', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-06 00:00:00', '2026-02-06', 'pix', NULL, '2026-02-06 17:48:42', '2026-02-06 17:48:52', NULL),
+(989, 1, 7, 3, NULL, NULL, 40, '2 TRIMESTRAIS ATRASADOS', 1000.00, 0.00, '2026-02-06', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-06 00:00:00', '2026-02-06', 'pix', NULL, '2026-02-06 18:55:23', '2026-02-06 18:57:41', NULL),
+(990, 1, 7, 2, NULL, NULL, 41, '2 TRIMESTRAIS ATRASADOS', 1000.00, 0.00, '2026-02-06', NULL, NULL, NULL, 'pago', NULL, 'avulsa', '2026-02-06 00:00:00', '2026-02-06', 'pix', NULL, '2026-02-06 18:55:49', '2026-02-06 18:57:24', NULL);
 
 -- --------------------------------------------------------
 
@@ -8101,12 +8135,33 @@ INSERT INTO `movimentacoes_financeiras` (`id`, `conta_origem_id`, `conta_destino
 (134, NULL, 3, 'entrada', 229.67, 1209.23, 'Recebimento de cobrança ID 2688 | Juros/Multa: R$ 16,07', 1, '2026-02-06', '2026-02-06 12:24:57', '2026-02-06 12:24:57', NULL),
 (135, NULL, 3, 'entrada', 178.20, 1387.43, 'Recebimento de cobrança ID 3169', 1, '2026-02-06', '2026-02-06 12:37:05', '2026-02-06 12:37:05', NULL),
 (136, NULL, 3, 'entrada', 324.00, 1711.43, 'Recebimento de cobrança ID 3649', 1, '2026-02-06', '2026-02-06 12:37:17', '2026-02-06 12:37:17', NULL),
-(137, 3, NULL, 'saida', 976.86, 834.00, 'Pagamento de conta a pagar ID 975', 1, '2026-02-06', '2026-02-06 12:47:06', '2026-02-06 12:47:06', NULL),
+(137, 3, NULL, 'saida', 976.86, 834.00, 'Pagamento de conta a pagar ID 975', 1, '2026-02-06', '2026-02-06 12:47:06', '2026-02-06 17:57:53', '2026-02-06 17:57:53'),
 (138, 3, NULL, 'saida', 3.60, 915.40, 'Pagamento de conta a pagar ID 976', 1, '2026-02-05', '2026-02-06 12:57:56', '2026-02-06 12:57:56', NULL),
 (142, 3, NULL, 'saida', 101.70, 806.89, 'Pagamento de conta a pagar ID 310 | Valor pago: R$ 101,70', 1, '2026-02-05', '2026-02-06 13:11:29', '2026-02-06 13:15:26', '2026-02-06 13:15:26'),
 (143, 3, NULL, 'saida', 101.70, 804.62, 'Pagamento de conta a pagar ID 310 | Valor pago: R$ 101,70', 1, '2026-02-05', '2026-02-06 13:18:23', '2026-02-06 13:20:33', '2026-02-06 13:20:33'),
 (144, 3, NULL, 'saida', 101.70, 802.35, 'Pagamento de conta a pagar ID 310 | Valor pago: R$ 101,70', 1, '2026-02-05', '2026-02-06 13:21:06', '2026-02-06 13:21:06', NULL),
-(145, 3, NULL, 'saida', 91.62, 710.73, 'Pagamento de conta a pagar ID 322 | Valor pago: R$ 91,62', 1, '2026-02-05', '2026-02-06 13:52:22', '2026-02-06 13:52:22', NULL);
+(145, 3, NULL, 'saida', 91.62, 710.73, 'Pagamento de conta a pagar ID 322 | Valor pago: R$ 91,62', 1, '2026-02-05', '2026-02-06 13:52:22', '2026-02-06 13:52:22', NULL),
+(146, NULL, 1, 'entrada', 4800.00, 5264.25, 'Recebimento de cobrança ID 4617', 1, '2026-02-06', '2026-02-06 14:01:18', '2026-02-06 14:01:18', NULL),
+(147, NULL, 1, 'entrada', 990.00, 6254.25, 'Recebimento de cobrança ID 10', 1, '2026-02-06', '2026-02-06 14:01:28', '2026-02-06 14:01:28', NULL),
+(148, 2, NULL, 'saida', 90.50, 2246.72, 'Pagamento de conta a pagar ID 979 | Valor pago: R$ 90,50', 1, '2026-02-05', '2026-02-06 14:22:21', '2026-02-06 14:22:21', NULL),
+(149, 1, NULL, 'saida', 20.00, 6234.25, 'Pagamento de conta a pagar ID 977 | Valor pago: R$ 20,00', 1, '2026-02-05', '2026-02-06 14:22:35', '2026-02-06 14:22:35', NULL),
+(150, 2, NULL, 'saida', 30.00, 2216.72, 'Pagamento de conta a pagar ID 978 | Valor pago: R$ 30,00', 1, '2026-02-06', '2026-02-06 14:22:49', '2026-02-06 14:22:49', NULL),
+(151, 2, NULL, 'saida', 25.00, 2191.72, 'Pagamento de conta a pagar ID 982 | Valor pago: R$ 25,00', 1, '2026-02-05', '2026-02-06 14:23:04', '2026-02-06 14:23:04', NULL),
+(152, 2, NULL, 'saida', 25.00, 2166.72, 'Pagamento de conta a pagar ID 981 | Valor pago: R$ 25,00', 1, '2026-02-06', '2026-02-06 14:23:14', '2026-02-06 14:23:14', NULL),
+(153, NULL, 3, 'entrada', 284.33, 995.06, 'Recebimento de cobrança ID 4772', 1, '2026-02-06', '2026-02-06 14:39:13', '2026-02-06 14:39:13', NULL),
+(154, NULL, 3, 'entrada', 1050.00, 2045.06, 'Recebimento de cobrança ID 4776', 1, '2026-02-05', '2026-02-06 14:48:16', '2026-02-06 14:48:16', NULL),
+(155, NULL, 2, 'entrada', 160.00, 2326.72, 'Recebimento de cobrança ID 21', 1, '2026-02-06', '2026-02-06 17:32:25', '2026-02-06 17:32:25', NULL),
+(156, NULL, 2, 'entrada', 450.00, 2776.72, 'Recebimento de cobrança ID 22', 1, '2026-02-06', '2026-02-06 17:32:33', '2026-02-06 17:32:33', NULL),
+(157, NULL, 1, 'entrada', 13958.63, 20192.88, 'Recebimento de cobrança ID 4780', 1, '2026-02-06', '2026-02-06 17:35:10', '2026-02-06 17:35:10', NULL),
+(158, 1, NULL, 'saida', 27.90, 20164.98, 'Pagamento de conta a pagar ID 988 | Valor pago: R$ 27,90', 1, '2026-02-06', '2026-02-06 17:48:52', '2026-02-06 17:48:52', NULL),
+(159, 2, NULL, 'saida', 60.90, 2715.82, 'Pagamento de conta a pagar ID 987 | Valor pago: R$ 60,90', 1, '2026-02-06', '2026-02-06 17:49:01', '2026-02-06 17:49:01', NULL),
+(160, 1, NULL, 'saida', 44.00, 20120.98, 'Pagamento de conta a pagar ID 986 | Valor pago: R$ 44,00', 1, '2026-02-06', '2026-02-06 17:49:17', '2026-02-06 17:49:17', NULL),
+(161, 3, NULL, 'saida', 976.86, 2045.06, 'Pagamento de conta a pagar ID 975 | Valor pago: R$ 976,86', 1, '2026-02-05', '2026-02-06 17:58:07', '2026-02-06 17:58:07', NULL),
+(162, NULL, 2, 'entrada', 957.00, 3672.82, 'Recebimento de cobrança ID 4643', 1, '2026-02-06', '2026-02-06 18:08:23', '2026-02-06 18:08:23', NULL),
+(163, 2, NULL, 'saida', 1000.00, 2672.82, 'Pagamento de conta a pagar ID 990 | Valor pago: R$ 1.000,00', 1, '2026-02-06', '2026-02-06 18:57:24', '2026-02-06 18:57:24', NULL),
+(164, 3, NULL, 'saida', 1000.00, 1045.06, 'Pagamento de conta a pagar ID 989 | Valor pago: R$ 1.000,00', 1, '2026-02-06', '2026-02-06 18:57:41', '2026-02-06 18:57:41', NULL),
+(165, 2, NULL, 'saida', 500.00, 2172.82, 'Pagamento de conta a pagar ID 774 | Valor pago: R$ 500,00', 1, '2026-02-06', '2026-02-06 18:59:47', '2026-02-06 18:59:47', NULL),
+(166, 2, NULL, 'saida', 500.00, 1672.82, 'Pagamento de conta a pagar ID 250 | Valor pago: R$ 500,00', 1, '2026-02-06', '2026-02-06 19:00:00', '2026-02-06 19:00:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -8167,10 +8222,10 @@ INSERT INTO `orcamentos` (`id`, `empresa_id`, `centro_custo_id`, `atendimento_id
 (1, 3, NULL, NULL, 18, NULL, '002/2026', NULL, '2026-01-24', 'aguardando_pagamento', 8000.00, 1095.90, 0.00, NULL, NULL, NULL, 'Orçamento Válido até 5 dias corridos;\r\nProdutos Novos com 12 meses de Garantia\r\nGarantia Não Contempla produtos comprados na internet ou por terceiros;\r\nGarantia Não Coberta por manutenções por outros Técnicos;\r\nCabeamento adicionado 300mt, caso necessário inclusão de mais, valor será repassado ao final;\r\nInfra Estrutura não inclusa, caso necessário passar infra em locais não protegido, será repassado ao cliente custos.\r\nAlvenaria e Pintura não inclusa, caso necessário recortes no gesso, a correção fica por conta do cliente.\r\nAterramento por conta do cliente\r\nValores com NF.', 1, '2026-01-19 13:46:20', '2026-01-28 23:10:37', NULL, 500.00, 'valor', 595.90, 'valor'),
 (2, 4, NULL, NULL, 27, NULL, '001/2026', NULL, '2026-01-24', 'em_elaboracao', 5180.00, 53.00, 518.00, NULL, NULL, NULL, NULL, 1, '2026-01-19 21:54:25', '2026-01-26 19:22:30', NULL, 53.00, 'valor', 0.00, 'valor'),
 (3, 1, NULL, NULL, 22, NULL, '001/2026', NULL, '2026-01-24', 'concluido', 2085.65, 0.00, 185.65, NULL, NULL, NULL, 'ORÇAMENTO PARA PINTURA DE ATÉ DUAS CORES, NÃO INCLUSO DESENHOS.\r\n\r\nMATERIAL POR CONTA DO CLIENTE', 43, '2026-01-19 23:28:51', '2026-02-02 17:39:58', NULL, 0.00, 'valor', 0.00, 'valor'),
-(4, 1, NULL, NULL, 22, NULL, '002/2026', NULL, '2026-01-24', 'aguardando_pagamento', 990.00, 0.00, 90.00, NULL, NULL, NULL, 'Destinado ao Recupera para equipamentos de marca própria e também outras máquinas os quais não possuímos assistência.\r\n\r\nConforme compromisso com o Projeto, tantaremos recuperar o máximo possivel de equipamentos, deixando-os em condições de uso.\r\n\r\nNão nos responsabilizamos por eventuais danos causados a clientes terceiros.\r\n\r\nNão garantimos que os equipamentos possam ser reparados.\r\n\r\nTodas as peças, ferramentas, etc por conta do contratante.', 43, '2026-01-19 23:34:03', '2026-01-26 15:10:14', NULL, 0.00, 'valor', 0.00, 'valor'),
+(4, 1, NULL, NULL, 22, NULL, '002/2026', NULL, '2026-01-24', 'concluido', 990.00, 0.00, 90.00, NULL, NULL, NULL, 'Destinado ao Recupera para equipamentos de marca própria e também outras máquinas os quais não possuímos assistência.\r\n\r\nConforme compromisso com o Projeto, tantaremos recuperar o máximo possivel de equipamentos, deixando-os em condições de uso.\r\n\r\nNão nos responsabilizamos por eventuais danos causados a clientes terceiros.\r\n\r\nNão garantimos que os equipamentos possam ser reparados.\r\n\r\nTodas as peças, ferramentas, etc por conta do contratante.', 43, '2026-01-19 23:34:03', '2026-02-06 14:01:28', NULL, 0.00, 'valor', 0.00, 'valor'),
 (5, 1, NULL, NULL, 22, NULL, '003/2026', NULL, '2026-01-24', 'concluido', 1039.90, 0.00, 89.90, NULL, NULL, NULL, NULL, 43, '2026-01-19 23:36:20', '2026-02-02 17:39:45', NULL, 0.00, 'valor', 0.00, 'valor'),
 (6, 1, NULL, NULL, 22, NULL, '004/2026', NULL, '2026-01-24', 'aguardando_pagamento', 3076.35, 0.00, 226.35, NULL, NULL, NULL, 'Remoção, preparação e pintura\r\nPintura será feita na parte externa, dependerá do tempo.\r\nTodo material por conta do cliente', 43, '2026-01-19 23:47:03', '2026-02-03 23:54:47', NULL, 0.00, 'valor', 0.00, 'valor'),
-(7, 1, NULL, NULL, 22, NULL, '005/2026', NULL, '2026-01-24', 'aguardando_pagamento', 4800.00, 0.00, 300.00, NULL, NULL, NULL, 'Remoção, preparação e pintura\r\nPintura será feita no local.\r\nTodo material por conta do cliente', 43, '2026-01-19 23:50:30', '2026-02-02 10:24:29', NULL, 0.00, 'valor', 0.00, 'valor'),
+(7, 1, NULL, NULL, 22, NULL, '005/2026', NULL, '2026-01-24', 'concluido', 4800.00, 0.00, 300.00, NULL, NULL, NULL, 'Remoção, preparação e pintura\r\nPintura será feita no local.\r\nTodo material por conta do cliente', 43, '2026-01-19 23:50:30', '2026-02-06 14:01:18', NULL, 0.00, 'valor', 0.00, 'valor'),
 (9, 1, NULL, NULL, 28, NULL, '007/2026', 'REVITALIZAÇÃO FACHADA PREDIO', '2026-01-24', 'aguardando_pagamento', 4620.00, 0.00, 420.00, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":420}]\"', 'boleto', 2, 'SERVIÇO INICIAL FOI PARA REVITALIZAÇÃO COM PINTURA E IMPERMEABILIZAÇÃO DAS PAREDES DO JARDIM EXTERNO. \r\nFOI ADICIONADO AO DECORRER DO SERVIÇO A REVITALIZAÇÃO DA CASINHA DA EDP E O PORTAO DE ACESSO A CASINHA.\r\nMATERIAL FOI CEDIDO PELO CLIENTE.', 43, '2026-01-20 00:01:10', '2026-02-03 23:45:36', NULL, 0.00, 'valor', 0.00, 'valor'),
 (10, 1, NULL, NULL, 22, NULL, '008/2026', NULL, '2026-01-24', 'em_andamento', 4800.00, 0.00, 300.00, NULL, NULL, NULL, 'Remoção, preparação e pintura\r\nPintura será feita no local.\r\nTodo material por conta do cliente', 43, '2026-01-20 00:03:11', '2026-02-03 19:48:57', NULL, 0.00, 'valor', 0.00, 'valor'),
 (11, 2, NULL, NULL, NULL, 1, '001/2026', NULL, '2026-01-24', 'recusado', 907.00, 0.00, 0.00, NULL, NULL, NULL, 'Segunda andar , colocando a condensadora no fosso de ventilação.', 43, '2026-01-20 00:12:48', '2026-01-29 20:49:37', NULL, 0.00, 'valor', 0.00, 'valor'),
@@ -8201,12 +8256,12 @@ INSERT INTO `orcamentos` (`id`, `empresa_id`, `centro_custo_id`, `atendimento_id
 (53, 2, NULL, NULL, 45, NULL, '016/2026', 'MANUTENÇÃO PREVENTIVA COM LIMPEZA E HIGIENIZAÇÃO', '2026-01-28', 'em_elaboracao', 586.58, 0.00, 26.58, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":26.5799999999999982946974341757595539093017578125}]\"', 'Faturado', NULL, 'MANUTENÇÃO PREVENTIVA COM LIMPEZA E HIGIENIZAÇÃO.\r\n\r\nSETOR: CAIXA\r\nSALA THUCK CENTER', 43, '2026-01-23 21:19:25', '2026-02-05 12:27:10', NULL, 0.00, 'valor', 0.00, 'valor'),
 (54, 1, NULL, NULL, 51, NULL, '010/2026', 'TROCA DE 10 PEÇAS DE PISOS 80X80 MANCHADAS', '2026-01-28', 'aguardando_aprovacao', 2734.00, 0.00, 10.00, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":10}]\"', NULL, NULL, 'SERVIÇO CONTRATADO PARA SER EXECUTADO NO FINAL DE SEMANA,\r\nSERVIÇO INCLUI A TROCA DAS PEÇAS MANCHADAS, QUANTIDADE DE PEÇAS QUE CLIENTE TEM NO ESTOQUE.\r\nMATERIAL EXTRA POR CONTA DA CONTRATADA.\r\nCLIENTE FICA CIENTE QUE SERÁ UM REPARO,MEDIANTE A ISSO PODE CAUSAR DIFERENÇAS DE TONS ENTRE AS PEDRAS.\r\nCLIENTE CIENTE DE QUE SERÁ NECESSÁRIO \r\nDEIXAR TODO AMBIENTE DESOCUPADO PARA O SERVIÇO.\r\nCLIENTE CIENTE QUE POR SER TRATAR DE UM PORCELANATO, PODE SER QUE AVARIAS PODEM SER CAUSADAS NAS PEDRAS AO LADO, E NESSE CASO, POR MAIS CAUTELA QUE POSSAMOS TOMAR, INFELIZMENTE PODE OCORRER.', 43, '2026-01-23 22:23:23', '2026-02-03 14:16:20', NULL, 0.00, 'valor', 0.00, 'valor'),
 (56, 3, NULL, NULL, 54, NULL, '013/2026', 'REINSTALAÇÃO DO SISTEMA', '2026-01-31', 'aguardando_pagamento', 250.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'REINSTALAÇÃO DO SISTEMA.', 43, '2026-01-26 16:41:54', '2026-01-28 01:47:48', NULL, 0.00, 'valor', 0.00, 'valor'),
-(57, 3, NULL, NULL, 66, NULL, '014/2026', 'REINSTALAÇÃO DE FECHADURA ELETRONICA', '2026-01-31', 'financeiro', 853.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'REINSTALAÇÃO DE FECHADURA ELETRONICA.', 43, '2026-01-26 17:32:59', '2026-02-05 13:23:23', NULL, 0.00, 'valor', 0.00, 'valor'),
+(57, 3, NULL, NULL, 66, NULL, '014/2026', 'REINSTALAÇÃO DE FECHADURA ELETRONICA', '2026-01-31', 'aguardando_pagamento', 853.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'REINSTALAÇÃO DE FECHADURA ELETRONICA.', 43, '2026-01-26 17:32:59', '2026-02-06 14:38:50', NULL, 0.00, 'valor', 0.00, 'valor'),
 (58, 2, NULL, NULL, NULL, 10, '018/2026', 'INSTALAÇÃO DE PONTO CARREGADOR VEICULAR', '2026-01-31', 'aprovado', 500.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'SERA CONTRATADO UM PROFISSINAL, PARA DESCER NO BALANCINHO PRA FIXAR O TUBO NA PAREDE.', 43, '2026-01-26 18:20:52', '2026-01-26 22:26:41', NULL, 0.00, 'valor', 0.00, 'valor'),
 (59, 2, NULL, NULL, NULL, 12, '019/2026', 'INSTALAÇÃO DE PONTO CARREGADOR VEICULAR', '2026-01-31', 'aprovado', 500.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'SERA CONTRATADO UM PROFISSIONAL PARA DESCER NO BALANCINHO PARA FIXAR O TUBO NA PAREDE.', 43, '2026-01-26 21:18:28', '2026-01-26 22:26:35', NULL, 0.00, 'valor', 0.00, 'valor'),
 (60, 2, NULL, NULL, 59, NULL, '020/2026', 'MANUTENÇÃO CORRETIVA- AR CPD', '2026-01-31', 'concluido', 240.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'ELE É DA MAQUINA ESTAVA SOLTA POR DESGASTE NA ARTE E POUCO DE SEGURANÇA.\r\n\r\nFOI TROCADO E APERTADO, USAMOS PU PARA PREENCHER FOLGA.', 43, '2026-01-26 22:05:37', '2026-02-02 10:08:40', NULL, 0.00, 'valor', 0.00, 'valor'),
-(61, 2, NULL, NULL, 56, NULL, '021/2026', 'MANUTENÇÃO CORRETIVA AR-CONDICIONADO CAIXA', '2026-01-31', 'aguardando_pagamento', 450.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, NULL, 43, '2026-01-26 22:12:53', '2026-01-27 12:05:18', NULL, 0.00, 'valor', 0.00, 'valor'),
-(62, 2, NULL, NULL, 56, NULL, '022/2026', 'MANUTENÇÃO CORRETIVA AR-CONDICIONADO', '2026-01-31', 'aguardando_pagamento', 160.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, NULL, 43, '2026-01-26 22:14:18', '2026-01-27 12:05:12', NULL, 0.00, 'valor', 0.00, 'valor'),
+(61, 2, NULL, NULL, 56, NULL, '021/2026', 'MANUTENÇÃO CORRETIVA AR-CONDICIONADO CAIXA', '2026-01-31', 'concluido', 450.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, NULL, 43, '2026-01-26 22:12:53', '2026-02-06 17:32:33', NULL, 0.00, 'valor', 0.00, 'valor'),
+(62, 2, NULL, NULL, 56, NULL, '022/2026', 'MANUTENÇÃO CORRETIVA AR-CONDICIONADO', '2026-01-31', 'concluido', 160.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, NULL, 43, '2026-01-26 22:14:18', '2026-02-06 17:32:25', NULL, 0.00, 'valor', 0.00, 'valor'),
 (63, 3, NULL, NULL, 63, NULL, '015/2026', 'CADASTRO DE CONTROLES PORTÃO PRINCIPAL.', '2026-02-01', 'financeiro', 174.90, 0.00, 15.90, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":15.9000000000000003552713678800500929355621337890625}]\"', 'faturado', 15, 'CONFORME SOLICITADO PELA VALERIA,CADASTRADOS E ENTREGUE A MESMA.\r\n\r\nVALOR DIVIDIDO PELAS DUAS EMPRESAS COMO SOLICITADO PELA VALERIA, KURUMA E RESTAURANTE.', 43, '2026-01-27 17:43:08', '2026-02-02 13:43:05', NULL, 0.00, 'valor', 0.00, 'valor'),
 (64, 3, NULL, NULL, 85, NULL, '016/2026', 'CONFIGURAÇÃO CENTRAL DE ALARME', '2026-02-01', 'concluido', 180.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'VISITA TECNICA PARA CONFIGURAÇÃO CENTRAL DE ALARME.', 43, '2026-01-27 20:07:03', '2026-02-03 20:37:41', NULL, 0.00, 'valor', 0.00, 'valor'),
 (65, 2, NULL, NULL, 23, NULL, '023/2026', 'INSTALAÇÃO DE AR-CONDICIONADO, ALMOXARIFADO OFICINA', '2026-02-01', 'concluido', 870.00, 0.00, 0.00, '\"[]\"', 'faturado', 15, NULL, 43, '2026-01-27 20:38:40', '2026-02-03 23:23:23', NULL, 0.00, 'valor', 0.00, 'valor'),
@@ -8217,7 +8272,7 @@ INSERT INTO `orcamentos` (`id`, `empresa_id`, `centro_custo_id`, `atendimento_id
 (70, 1, NULL, NULL, 28, NULL, '014/2026', 'SERVIÇO 2, SALA DE ALMOXARIFADO NO TERRAÇO', '2026-02-02', 'em_andamento', 14702.60, 0.00, 0.00, '\"[]\"', 'boleto', 3, 'COM BASE EM BLOCO CHEIO E ESTRUTURA DA PAREDE EM DRYWALL C/PLACA ANTIUMIDADE.', 43, '2026-01-28 19:09:31', '2026-02-02 13:47:16', NULL, 0.00, 'valor', 0.00, 'valor'),
 (71, 3, NULL, NULL, NULL, 17, '017/2026', 'SERVIÇO- ACESSO REMOTO', '2026-02-02', 'recusado', 180.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, NULL, 43, '2026-01-28 22:35:33', '2026-02-02 13:34:30', NULL, 0.00, 'valor', 0.00, 'valor'),
 (72, 3, NULL, NULL, 14, NULL, '018/2026', 'SERVIÇO-INSTALAÇÃO DE LEITOR FACIAL NA CATRACA', '2026-02-02', 'aguardando_aprovacao', 1980.00, 120.00, 0.00, '\"[]\"', 'boleto', 3, 'INSTALAÇÃO DE LEITOR FACIAL NA CATRACA.\r\nDESCONTO PARA PAGAMENTO A VISTA ( 50% DE ENTRADA E RESTANTE PÓS A INSTALAÇÃO.\r\nPARA PAGAMENTO PARCELADO, VALOR ORIGINAL', 43, '2026-01-28 23:45:48', '2026-01-30 14:48:34', NULL, 60.00, 'valor', 60.00, 'valor'),
-(73, 3, NULL, NULL, 86, NULL, '019/2026', 'SERVIÇO- MANUTENÇÃO DE LEITOR FACIAL CATRACA', '2026-02-03', 'aprovado', 250.00, 0.00, 0.00, '\"[]\"', 'boleto', 1, 'MANUTENÇÃO DE LEITOR FACIAL CATRACA.\r\nLEITOR FACIAL QUEIMOU, IDENTIFICAR O PROBLEMA.\r\n\r\nPAGAMENTO VIA BOLETO PARA DAQUI 30 DIAS.', 43, '2026-01-29 17:08:32', '2026-02-04 12:07:52', NULL, 0.00, 'valor', 0.00, 'valor'),
+(73, 3, NULL, NULL, 86, NULL, '019/2026', 'SERVIÇO- MANUTENÇÃO DE LEITOR FACIAL CATRACA', '2026-02-03', 'cancelado', 250.00, 0.00, 0.00, '\"[]\"', 'boleto', 1, 'MANUTENÇÃO DE LEITOR FACIAL CATRACA.\r\nLEITOR FACIAL QUEIMOU, IDENTIFICAR O PROBLEMA.\r\n\r\nPAGAMENTO VIA BOLETO PARA DAQUI 30 DIAS.', 43, '2026-01-29 17:08:32', '2026-02-06 14:45:34', NULL, 0.00, 'valor', 0.00, 'valor'),
 (74, 3, NULL, NULL, 84, NULL, '020/2026', 'REFORMULAÇÃO CONTROLE DE ACESSO DA PORTARIA', '2026-02-06', 'aguardando_pagamento', 40115.35, 0.00, 2910.35, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":2910.34999999999990905052982270717620849609375}]\"', 'boleto', 4, 'BOLETO BANCÁRIO \r\nENTRADA DE 40% + 30/60/90/120 \r\n\r\nENTRADA DE R$ 15.000,00\r\nBOLETO 1 DIA 02/03 : R$ 6.278,75\r\nBOLETO 2 DIA 02/04 : R$ 6.278,75\r\nBOLETO 3 DIA 02/05 : R$ 6.278,75\r\nBOLETO 4 DIA 02/05 : R$ 6.278,75\r\n\r\nCabeamento NÃO INCLUSO, tentaremos usar o que já tem, caso necessário, será repassado e valor repassado.\r\n\r\nVALOR DO TÉCNICO PARA 20 DIAS UTEIS A SER ACORDADO A PARTE.\r\n\r\nOrçamento conforme prévia visita, tentaremos utilizar as tubulações e infra do local, caso não seja possível\r\nestruturas como conduites, canaletas, eletrodutos por conta do cliente;\r\n\r\nTodo o sistema requer manutenção e suporte técnico qualificado para solucionar problemas e auxiliar na\r\noperação do mesmo. Fica de responsabilidade do cliente a sua operação e manutenção preventiva de todo os equipamentos e sistema de gerenciamento. Disponibilizamos um contrato de manutenção Corretiva e\r\nPreventiva com Suporte Técnico Especializado no valor de R$ 390,00 para sanar os problemas e retirar dúvidas.\r\n\r\nIntegração do Sistema dependerá unicamente do suporte do sistema, indicamos a troca do Sistema de\r\nGerenciamento por um mais moderno para utilização.', 1, '2026-02-01 13:02:28', '2026-02-04 00:30:06', NULL, 0.00, 'valor', 0.00, 'valor'),
 (75, 1, NULL, NULL, 28, NULL, '015/2026', 'LIMPEZA PESADA DE PISOS E RODAPÉS', '2026-02-06', 'concluido', 3000.00, 0.00, 199.00, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":199}]\"', 'pix', NULL, 'Caso o piso apresente desgaste excessivo, manchas profundas ou necessidade de tratamento adicional, o serviço\r\npoderá ser reavaliado mediante aprovação do cliente.', 1, '2026-02-01 15:02:07', '2026-02-01 17:34:18', NULL, 0.00, 'valor', 0.00, 'valor'),
 (76, 2, NULL, NULL, 35, NULL, '025/2026', 'REFRIGERAÇÃO', '2026-02-06', 'concluido', 1676.25, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'SERVIÇO RECEBIDO EM jANEIRO', 1, '2026-02-01 21:39:39', '2026-02-01 21:58:46', NULL, 0.00, 'valor', 0.00, 'valor'),
@@ -8227,12 +8282,12 @@ INSERT INTO `orcamentos` (`id`, `empresa_id`, `centro_custo_id`, `atendimento_id
 (80, 2, NULL, NULL, 23, NULL, '027/2026', 'REFRIGERAÇÃO', '2026-02-06', 'concluido', 280.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'NFS-e: 247 cancelada - nova 250 OS: 007-2026', 1, '2026-02-01 22:10:06', '2026-02-02 10:03:01', NULL, 0.00, 'valor', 0.00, 'valor'),
 (81, 3, NULL, NULL, 83, NULL, '023/2026', 'CADASTRO DE CONTROLES PORTÃO PRINCIPAL.', '2026-02-07', 'financeiro', 174.90, 0.00, 15.90, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":15.9000000000000003552713678800500929355621337890625}]\"', 'faturado', 15, 'CONFORME SOLICITADO PELA VALERIA,CADASTRADOS E ENTREGUE A MESMA.\r\n\r\nVALOR DIVIDIDO PELAS DUAS EMPRESAS COMO SOLICITADO PELA VALERIA, KURUMA E RESTAURANTE.', 43, '2026-02-02 13:44:57', '2026-02-02 13:45:00', NULL, 0.00, 'valor', 0.00, 'valor'),
 (82, 2, NULL, NULL, 61, NULL, '028/2026', 'MANUTENÇÃO PREVENTIVA', '2026-02-07', 'aguardando_aprovacao', 3850.00, 0.00, 350.00, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":350}]\"', 'pix', NULL, 'VISITA TECNICA JA EXECUTADA.\r\nFoi realizado manutenção Corretiva nós drenos e entupimento\r\nnos mes de dezembro, a qual fico de não cobra se caso for ser\r\nfeito o serviço de manutenção geral .', 43, '2026-02-02 13:54:07', '2026-02-02 18:25:25', NULL, 0.00, 'valor', 0.00, 'valor'),
-(83, 2, NULL, NULL, 61, NULL, '029/2026', 'INSTALAÇÃO DE AR-CONDICIONADO,NA RECEPÇÃO DA OFICINA VITTA NAUTICA', '2026-02-07', 'aguardando_pagamento', 957.00, 0.00, 87.00, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":87}]\"', 'pix', NULL, 'LIMPEZA PARA REMOÇÃO DE RESIDUOS E OLEO R22 DA MAQUINA ANTERIOR, PARA INSTALAÇÃO DA MAQUINA COM O NOVO GAS R32.\r\nINSTALAÇÃO DO AR CONDICIONADO DE 24MIL BTUS, NA RECEPÇAO DA OFICINA DA VITTA NAUTICA.\r\nJA SENDO EXECUTADO O SERVIÇO.', 43, '2026-02-02 14:05:27', '2026-02-04 00:21:17', NULL, 0.00, 'valor', 0.00, 'valor'),
+(83, 2, NULL, NULL, 61, NULL, '029/2026', 'INSTALAÇÃO DE AR-CONDICIONADO,NA RECEPÇÃO DA OFICINA VITTA NAUTICA', '2026-02-07', 'concluido', 957.00, 0.00, 87.00, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":87}]\"', 'pix', NULL, 'LIMPEZA PARA REMOÇÃO DE RESIDUOS E OLEO R22 DA MAQUINA ANTERIOR, PARA INSTALAÇÃO DA MAQUINA COM O NOVO GAS R32.\r\nINSTALAÇÃO DO AR CONDICIONADO DE 24MIL BTUS, NA RECEPÇAO DA OFICINA DA VITTA NAUTICA.\r\nJA SENDO EXECUTADO O SERVIÇO.', 43, '2026-02-02 14:05:27', '2026-02-06 18:08:23', NULL, 0.00, 'valor', 0.00, 'valor'),
 (85, 2, NULL, NULL, 23, NULL, '030/2026', 'Referente ao serviço de Manutenção Preventiva - Sala de Qualidade - VD Cariacica.', '2026-02-07', 'aguardando_pagamento', 280.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'Nota do serviço 240-2025\r\nReferente ao serviço de Manutenção Preventiva - Sala de Qualidade - VD Cariacica.\r\n\r\nEMAIL ENVIADO NO DIA 02/12', 1, '2026-02-02 16:36:14', '2026-02-02 16:36:24', NULL, 0.00, 'valor', 0.00, 'valor'),
 (86, 1, NULL, NULL, 40, NULL, '016/2026', 'LIMPEZA DE CALHA', '2026-02-07', 'aguardando_pagamento', 1500.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'SERVIÇO AGUARDANDO PAGAMENTO', 1, '2026-02-02 16:37:38', '2026-02-02 16:38:35', NULL, 0.00, 'valor', 0.00, 'valor'),
 (87, 1, NULL, NULL, 41, NULL, '017/2026', 'LIMPEZA DE CALHA', '2026-02-07', 'aguardando_pagamento', 2600.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'SERVIÇO EXECUTADO EM DEZEMBRO', 1, '2026-02-02 16:38:20', '2026-02-02 16:38:31', NULL, 0.00, 'valor', 0.00, 'valor'),
 (88, 2, NULL, NULL, 24, NULL, '031/2026', 'Manutenção Corretiva', '2026-02-07', 'concluido', 300.00, 0.00, 20.00, '\"[{\\\"nome\\\":\\\"NF\\\",\\\"valor\\\":20}]\"', 'pix', NULL, 'SALA DO MÉDICO\r\nCLIENTE COBRADO NO DIA 09/01', 1, '2026-02-02 16:42:59', '2026-02-06 03:11:54', NULL, 0.00, 'valor', 0.00, 'valor'),
-(89, 1, NULL, NULL, 43, NULL, '018/2026', 'Serviços de Alvenaria, Reforma, Pintura e Serralheria da VD Cachoeiro.', '2026-02-07', 'aguardando_pagamento', 27917.25, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'Nota do serviço 195-2025\r\nReferente a Entrada do serviço NF 01/02\r\nServiços de Alvenaria, Reforma, Pintura e Serralheria da VD Cachoeiro.', 1, '2026-02-02 16:45:04', '2026-02-02 16:45:18', NULL, 0.00, 'valor', 0.00, 'valor'),
+(89, 1, NULL, NULL, 43, NULL, '018/2026', 'Serviços de Alvenaria, Reforma, Pintura e Serralheria da VD Cachoeiro.', '2026-02-07', 'aguardando_pagamento', 27917.25, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'Nota do serviço 195-2025\r\nReferente a Entrada do serviço NF 01/02\r\nServiços de Alvenaria, Reforma, Pintura e Serralheria da VD Cachoeiro.', 1, '2026-02-02 16:45:04', '2026-02-06 17:34:53', NULL, 0.00, 'valor', 0.00, 'valor'),
 (90, 2, NULL, NULL, 45, NULL, '032/2026', 'Manutenção preventiva ar condicionado split 12 mil btus', '2026-02-07', 'concluido', 560.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'NF: 258 OS: 016-2026', 1, '2026-02-02 19:33:52', '2026-02-02 19:34:21', NULL, 0.00, 'valor', 0.00, 'valor'),
 (91, 2, NULL, NULL, 21, NULL, '033/2026', 'INSTALAÇÃO DE AR-CONDICIONADO NO REFEITORIO', '2026-02-08', 'aprovado', 660.00, 0.00, 60.00, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":60}]\"', 'faturado', 15, 'INSTALAÇAO DE AR-CONDICIONADO DE 24MIL BTUS,NO REFEITORIO', 43, '2026-02-03 16:45:29', '2026-02-04 22:16:24', NULL, 0.00, 'valor', 0.00, 'valor'),
 (92, 1, NULL, NULL, 51, NULL, '019/2026', 'TESTE DE APLICAÇÃO DE PRODUTO EM PORCELANATO.', '2026-02-08', 'aguardando_aprovacao', 275.00, 0.00, 25.00, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":25}]\"', 'pix', NULL, 'ESTA VISITA TECNICA SERA PARA TESTE DE APLICAÇÃO DE PRODUTO PARA REMOÇÃO DA MANCHA DE 1 PORCELANATO.\r\nPARA VALIAÇÃO DO CLIENTE E CONFIRMAR SE IRA APLICAR O PRODUTO EM TODO O AMBIENTE OU SEGUIREMOS COM A PROPOSTA DE TROCA DOS PISOS ENVIADA ANTERIORMENTE.\r\nMATERIAL, E MÃO DE OBRA INCLUSO NO ORÇAMENTO.', 43, '2026-02-03 16:58:44', '2026-02-04 16:07:25', NULL, 0.00, 'valor', 0.00, 'valor'),
@@ -8241,16 +8296,16 @@ INSERT INTO `orcamentos` (`id`, `empresa_id`, `centro_custo_id`, `atendimento_id
 (95, 3, NULL, 129, 13, NULL, '025/2026', 'FOI IDENTIFICADO PROBLEMA NO PORTÃO G1, NÃO SENDO EXIBIDA IMAGEM NO SISTEMA.', '2026-02-09', 'financeiro', 144.87, 0.00, 13.17, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":13.1699999999999999289457264239899814128875732421875}]\"', 'faturado', 10, 'FOI DETECTADO FALHA NA CAMERA ENTRADA G1.\r\nFEITO TROCA DO BALUN E CONECTOR P4 NA CAMERA G1 ENTRADA.\r\nFOI IDENTIFICADO FALHA COLETIVA NA GARAGEM.\r\nCONSTATADO DEFEITO NA FONTE COLETIVA.\r\nEFETUADA A SUBSTITUIÇÃO POR UMA FONTE 5A 12V.\r\n\r\nCONFORME VISITA TECNICA OCORRIDA NO DIA 03/02/2026, SOLICITADO PELO ATENDIMENTO 84.', 43, '2026-02-04 16:07:11', '2026-02-04 16:58:47', NULL, 0.00, 'valor', 0.00, 'valor'),
 (96, 2, NULL, NULL, 57, NULL, '035/2026', 'MANUTENÇÃO QDC DOS AR CONDICIONADO', '2026-02-09', 'em_elaboracao', 2361.30, 0.00, 350.00, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":350}]\"', 'faturado', 15, 'REFERENTE AO SERVIÇO DE:\r\nDESMONTAGEM DOS QDC;\r\nIDENTIFICAÇÃO DOS CIRCUITOS;\r\nDIMENSIONAMENTO;\r\nPADRONIZAÇÃO E SUBSTITUIÇÃO DOS DISJUNTORES;\r\n\r\nSERVICO SERÁ FEITO FORA DO HORARIO COMERCIAL.', 1, '2026-02-04 16:44:33', '2026-02-05 14:18:38', NULL, 0.00, 'valor', 0.00, 'valor'),
 (97, 1, NULL, NULL, NULL, 21, '020/2026', 'REFORMA FACHADA CASA', '2026-02-09', 'aguardando_aprovacao', 75900.00, 0.00, 6900.00, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":6900}]\"', 'pix', NULL, '°proteção de soleiras, esquadrias, portas, janelas, calçada, plantas; retirada de sujeiras e remoção de partes soltas (pedra palito solta, massa solta).\r\n°raspagem/remoção de partes soltas, aplicação de chapisco/camada de regularização onde necessário, massa corrida/regularização de imperfeições (áreas de fachada que serão pintadas). \r\n°aplicação de vedantes/selantes nas juntas e trincas. \r\n°Impermeabilização localizada Em caso de manchas de umidade. \r\n°(assentamento de placas/porcelanato 60x120 / pedra ou aeterna) — aplicação de argamassa, assentamento, cortes, rejuntamento. \r\n°Aplicação de primer/fundo preparador — antes pintura. \r\n°Pintura de fachada (efeito concreto + 2 demãos da cor final) — acabamento (rodapés, garagens, pequenos detalhes). \r\n°Remoção da porta de alumínio existente e instalação de porta nova em ACM - acabamento Aço Corten (porta principal). \r\n°Instalação de marquise em Alvenaria sobre a porta, comprimento 5,00 m. \r\n°troca do forro da anti sala,pois nao da so pintura.\r\n°correção dos trincos das colunas.\r\n°correção do telhado na parte externa com vazamento, sera usando a manta aluminizada.\r\n°checagem final e entrega com laudo/ficha de execução. \r\n\r\n-Orçamento Baseado no Projeto enviado pelo Arquiteto; Orçamento para seguir exatamente o que está no projeto; Prazo de execução poderá ser alterado devido ao clima; Orçamento sem o Material somente Mão de Obra. Os Valores foram baseados em pesquisas de mercado para a região da Grande Vitória e consideram materiais de alto padrão, adequados para a área nobre do Morro do Moreno.\r\n\r\nINICIALMENTE FOI DADO UM ORÇAMENTO PARA O CLIENTE AO QUAL INFORMOU QUE TINHA OUTRO ORÇAMENTO NO VALOR DE 40MIL, AO REVER TODO O SERVIÇO, A ADIÇÃO DE SERVIÇO A + PINTURA INTERNA DE TODAS AS PARTES DA CASA, REMOÇÃO DO TELHADO(DESCARTE DO CLIENTE), LIMPEZA DO REJUNTE,IMPERMEABILIZAÇÃO DA PARTE QUE SERA RETIRADO O TELHADO NAO CONTEMPLADO NO ORÇAMENTO.\r\nVALOR ATUALIZADO ESSE.', 43, '2026-02-04 17:33:35', '2026-02-05 19:14:48', NULL, 0.00, 'valor', 0.00, 'valor'),
-(98, 3, NULL, NULL, 86, NULL, '026/2026', 'INSTALAÇÃO DE NOVO LEITOR FACIAL E NOBREAK', '2026-02-09', 'em_andamento', 1800.00, 0.00, 0.00, '\"[]\"', 'boleto', 2, 'NA VISITA TECNICA FOI VISTO O LEITOR FACIAL COM CURTO NA PLACA.\r\nE O CLIENTE SOLICITOU PELA TROCA NO NOBREAK.\r\nE DO LEITOR FACIAL NOVO.', 43, '2026-02-04 19:55:36', '2026-02-06 12:44:07', NULL, 0.00, 'valor', 0.00, 'valor'),
+(98, 3, NULL, NULL, 86, NULL, '026/2026', 'INSTALAÇÃO DE NOVO LEITOR FACIAL E NOBREAK', '2026-02-09', 'aguardando_pagamento', 2050.00, 0.00, 0.00, '\"[]\"', 'boleto', 2, 'NA VISITA TECNICA FOI VISTO O LEITOR FACIAL COM CURTO NA PLACA.\r\nE O CLIENTE SOLICITOU PELA TROCA NO NOBREAK.\r\nE DO LEITOR FACIAL NOVO.', 43, '2026-02-04 19:55:36', '2026-02-06 14:48:00', NULL, 0.00, 'valor', 0.00, 'valor'),
 (99, 3, NULL, 142, 12, NULL, '036/2026', 'FOI IDENTIFICADO QUE O NOBREAK LOCALIZADO NOS FUNDOS ENCONTRA-SE DESLIGADO.', '2026-02-09', 'financeiro', 214.48, 0.00, 19.50, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":19.5}]\"', 'faturado', 10, 'CAMERA ELEVADOR PAROU,NOBREAK FUNDO DESLIGADO.\r\nNECESSERARIA TROCA BATERIA PRO NOBREAK.\r\nNECESSARIA A TROCA DOS CONECTORES DA CAMERA DA RAMPA NO SOB SOLO.\r\nREPARO NO LEITOR DO TERREO, FEITO OS TESTES NOS LEITORES DO PORTAO SOB SOLO,TERREO E CIMA.\r\n\r\nSERVIÇO FINALIZADO NO DIA 04/02/2026.', 43, '2026-02-04 20:42:36', '2026-02-04 22:08:55', NULL, 0.00, 'valor', 0.00, 'valor'),
-(100, 3, NULL, NULL, 43, NULL, '037/2026', 'INSTALAÇÃO DE MOTOR INDUSTRIAL PORTÃO 2000KG', '2026-02-10', 'aprovado', 6058.30, 0.00, 550.75, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":550.75}]\"', 'faturado', 15, 'PROPOSTA FEITA EM DEZEMBRO PARA CLIENTE, PARA SOLUÇÃO NA ENTRADA PRINCIPAL NA VD CACHOEIRO PARA UM CONTROLE MAIS EFICAZ E SEGURO DE ACESSO.\r\n\r\n Instalação Configuração e Treinamento\r\n(Remoção dos Bloquetes no chão para lançamento de infra com cabeamento até\r\na guarita, instalação e configuração do receptor wifi).', 43, '2026-02-05 13:10:37', '2026-02-05 13:24:29', NULL, 0.00, 'valor', 0.00, 'valor'),
+(100, 3, NULL, NULL, 43, NULL, '037/2026', 'INSTALAÇÃO DE MOTOR INDUSTRIAL PORTÃO 2000KG', '2026-02-10', 'aguardando_pagamento', 5507.55, 0.00, 0.00, '\"[]\"', 'faturado', 15, 'PROPOSTA FEITA EM DEZEMBRO PARA CLIENTE, PARA SOLUÇÃO NA ENTRADA PRINCIPAL NA VD CACHOEIRO PARA UM CONTROLE MAIS EFICAZ E SEGURO DE ACESSO.\r\n\r\n Instalação Configuração e Treinamento\r\n(Remoção dos Bloquetes no chão para lançamento de infra com cabeamento até\r\na guarita, instalação e configuração do receptor wifi).', 43, '2026-02-05 13:10:37', '2026-02-06 17:14:38', NULL, 0.00, 'valor', 0.00, 'valor'),
 (101, 3, NULL, NULL, 63, NULL, '038/2026', 'Cadastramento dos Controles Remotos do Portão da VD Cariacica.', '2026-02-10', 'aguardando_pagamento', 220.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'Referente a NF 228, Controle cadastro em 02/12', 1, '2026-02-05 13:34:36', '2026-02-05 13:35:29', NULL, 0.00, 'valor', 0.00, 'valor'),
 (102, 2, NULL, NULL, 46, NULL, '036/2026', 'MANUTENÇÃO CORRETIVA AR UNIDADE', '2026-02-10', 'aguardando_pagamento', 715.00, 0.00, 65.00, '\"[{\\\"nome\\\":\\\"NOTA FISCAL\\\",\\\"valor\\\":65}]\"', 'faturado', 1, 'REF ORÇAMENTO 248-2025\r\nNF: 220', 1, '2026-02-05 13:58:06', '2026-02-05 13:58:20', NULL, 0.00, 'valor', 0.00, 'valor'),
 (103, 2, NULL, NULL, 87, NULL, '037/2026', 'MANUTENÇÃO E LIMPEZA', '2026-02-10', 'aguardando_pagamento', 320.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'ORÇ 263-2025', 1, '2026-02-05 14:08:18', '2026-02-05 14:11:35', NULL, 0.00, 'valor', 0.00, 'valor'),
 (104, 2, NULL, NULL, NULL, 23, '038/2026', 'REMOÇÃO E REINSTALAÇÃO AR-CONDICIONADO EM NOVO LOCAL', '2026-02-10', 'financeiro', 600.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'O cliente solicitou a remoção e a realocação do aparelho de ar-condicionado de 12.000 BTUs, de sua propriedade, para novo local, sendo o serviço executado com o equipamento em perfeito estado de funcionamento.', 43, '2026-02-05 14:49:27', '2026-02-05 18:04:39', NULL, 0.00, 'valor', 0.00, 'valor'),
 (105, 2, NULL, NULL, NULL, 24, '039/2026', 'MANUTENÇÃO PREVENTIVA AR-CONDICIONADO', '2026-02-10', 'aprovado', 250.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'CLIENTE SOLICITOU A LIMPEZA DO SEU AR-CONDICIONADO 12MIL BTUS.', 43, '2026-02-05 18:25:23', '2026-02-05 18:33:42', NULL, 0.00, 'valor', 0.00, 'valor'),
-(106, 2, NULL, NULL, 59, NULL, '040/2026', 'MANUTENÇÃO PREVENTIVA AR-CONDICIONADO', '2026-02-10', 'em_elaboracao', 250.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'CLIENTE SOLICITOU ATENDIMENTO PARA OLHAR SEU AR-CONDICIONADO PINGANDO.\r\nFOI NECESSARIO SOMENTE HIGIENIZAÇÃO NO AR-CONDIONADO.', 43, '2026-02-05 19:09:33', '2026-02-05 19:09:33', NULL, 0.00, 'valor', 0.00, 'valor'),
-(107, 3, NULL, 143, 14, NULL, '039/2026', 'PROBLEMA NO CABEAMENTO QUE LIGA O PC AO ROTEADOR', '2026-02-10', 'em_elaboracao', 350.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'CLIENTE INFORMA PROBLEMA DE REDE NA ACADEMIA, NECESSARIO VISITA DO TECNICO PARA PROCURAR DEFEITOS NOS CABOS,CONECTORES, E MAPEAR A REDE.', 43, '2026-02-05 19:30:25', '2026-02-05 19:30:25', NULL, 0.00, 'valor', 0.00, 'valor');
+(106, 2, NULL, NULL, 59, NULL, '040/2026', 'MANUTENÇÃO PREVENTIVA AR-CONDICIONADO', '2026-02-10', 'aguardando_pagamento', 250.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'CLIENTE SOLICITOU ATENDIMENTO PARA OLHAR SEU AR-CONDICIONADO PINGANDO.\r\nFOI NECESSARIO SOMENTE HIGIENIZAÇÃO NO AR-CONDIONADO.', 43, '2026-02-05 19:09:33', '2026-02-06 14:47:41', NULL, 0.00, 'valor', 0.00, 'valor'),
+(107, 3, NULL, 143, 14, NULL, '039/2026', 'PROBLEMA NO CABEAMENTO QUE LIGA O PC AO ROTEADOR', '2026-02-10', 'aprovado', 350.00, 0.00, 0.00, '\"[]\"', 'pix', NULL, 'CLIENTE INFORMA PROBLEMA DE REDE NA ACADEMIA, NECESSARIO VISITA DO TECNICO PARA PROCURAR DEFEITOS NOS CABOS,CONECTORES, E MAPEAR A REDE.', 43, '2026-02-05 19:30:25', '2026-02-06 14:43:25', NULL, 0.00, 'valor', 0.00, 'valor');
 
 -- --------------------------------------------------------
 
@@ -8599,19 +8654,9 @@ INSERT INTO `orcamento_itens` (`id`, `orcamento_id`, `item_comercial_id`, `tipo`
 (775, 95, 5, 'produto', 'CONECTOR P4 MACHO', 1, 5.00, 5.00, '2026-02-04 16:54:10', '2026-02-04 16:54:10'),
 (776, 94, 83, 'servico', 'SERVIÇO DE INFORMÁTICA - INFRA', 1, 350.00, 350.00, '2026-02-04 16:59:33', '2026-02-04 16:59:33'),
 (777, 94, 7, 'produto', 'CABO DE REDE 100% COBRE - METRO', 30, 2.56, 76.80, '2026-02-04 16:59:33', '2026-02-04 16:59:33'),
-(849, 98, 145, 'produto', 'SUPORTE LEITOR FACIAL 40CM', 1, 1300.00, 1300.00, '2026-02-04 20:06:37', '2026-02-04 20:06:37'),
-(850, 98, 207, 'produto', 'NOBREAK 600VA', 1, 500.00, 500.00, '2026-02-04 20:06:37', '2026-02-04 20:06:37'),
 (853, 99, 14, 'produto', 'BATERIA 12V 7A SELADA  VRLA - INTELBRAS', 1, 189.98, 189.98, '2026-02-04 22:08:49', '2026-02-04 22:08:49'),
 (854, 99, 5, 'produto', 'CONECTOR P4 MACHO', 1, 5.00, 5.00, '2026-02-04 22:08:49', '2026-02-04 22:08:49'),
 (855, 21, 61, 'servico', 'MANUTENÇÃO PREVENTIVA - HIGIENIZAÇÃO E LUBRIFICAÇÃO AR 18 À 24', 1, 280.00, 280.00, '2026-02-05 12:34:29', '2026-02-05 12:34:29'),
-(872, 100, 212, 'servico', 'INSTALAÇÃO CONFIGURAÇÃO E TREINAMENTO', 1, 1150.00, 1150.00, '2026-02-05 13:23:49', '2026-02-05 13:23:49'),
-(873, 100, 208, 'produto', 'KIT MOTOR PPA DZ INDUSTRIAL PORTÃO 2000KG 433MHZ', 1, 0.00, 0.00, '2026-02-05 13:23:49', '2026-02-05 13:23:49'),
-(874, 100, 209, 'produto', 'CREMALHEIRAS INDUSTRIAL', 6, 0.00, 0.00, '2026-02-05 13:23:49', '2026-02-05 13:23:49'),
-(875, 100, 210, 'produto', 'CONTROLADOR DE ACESSO WIFI INTELBRAS', 1, 0.00, 0.00, '2026-02-05 13:23:49', '2026-02-05 13:23:49'),
-(876, 100, 211, 'produto', 'ACIONADOR SAIDA SOBREPOR BT 3000', 1, 0.00, 0.00, '2026-02-05 13:23:49', '2026-02-05 13:23:49'),
-(877, 100, 6, 'produto', 'CABO DE REDE 100% COBRE', 30, 0.00, 0.00, '2026-02-05 13:23:49', '2026-02-05 13:23:49'),
-(878, 100, 135, 'produto', 'CABO FLEXIVEL 2,5MM PRETO CORFIO-METRO', 30, 0.00, 0.00, '2026-02-05 13:23:49', '2026-02-05 13:23:49'),
-(879, 100, 24, 'produto', 'VALOR TOTAL MATERIAL', 1, 4357.55, 4357.55, '2026-02-05 13:23:49', '2026-02-05 13:23:49'),
 (880, 101, 168, 'servico', 'SERVIÇO- MOTOR PORTÃO', 1, 220.00, 220.00, '2026-02-05 13:34:36', '2026-02-05 13:34:36'),
 (881, 97, 186, 'servico', 'SERVIÇO-PROTEÇÃO E PREPARO', 1, 0.00, 0.00, '2026-02-05 13:52:11', '2026-02-05 13:52:11'),
 (882, 97, 189, 'servico', 'SERVIÇO-CORREÇÃO DE SUPERFICIE (RASPAGEM/REMOÇÃO)', 1, 0.00, 0.00, '2026-02-05 13:52:11', '2026-02-05 13:52:11'),
@@ -8650,7 +8695,18 @@ INSERT INTO `orcamento_itens` (`id`, `orcamento_id`, `item_comercial_id`, `tipo`
 (918, 104, 32, 'servico', 'INSTALAÇÃO AR CONDICIONADO 9 À 12', 1, 450.00, 450.00, '2026-02-05 17:56:23', '2026-02-05 17:56:23'),
 (919, 105, 60, 'servico', 'MANUTENÇÃO PREVENTIVA - HIGIENIZAÇÃO E LUBRIFICAÇÃO AR 9 À 12', 1, 250.00, 250.00, '2026-02-05 18:25:23', '2026-02-05 18:25:23'),
 (920, 106, 60, 'servico', 'MANUTENÇÃO PREVENTIVA - HIGIENIZAÇÃO E LUBRIFICAÇÃO AR 9 À 12', 1, 250.00, 250.00, '2026-02-05 19:09:33', '2026-02-05 19:09:33'),
-(921, 107, 83, 'servico', 'SERVIÇO DE INFORMÁTICA - INFRA', 1, 350.00, 350.00, '2026-02-05 19:30:25', '2026-02-05 19:30:25');
+(921, 107, 83, 'servico', 'SERVIÇO DE INFORMÁTICA - INFRA', 1, 350.00, 350.00, '2026-02-05 19:30:25', '2026-02-05 19:30:25'),
+(922, 98, 145, 'produto', 'SUPORTE LEITOR FACIAL 40CM', 1, 1300.00, 1300.00, '2026-02-06 14:46:07', '2026-02-06 14:46:07'),
+(923, 98, 207, 'produto', 'NOBREAK 600VA', 1, 500.00, 500.00, '2026-02-06 14:46:07', '2026-02-06 14:46:07'),
+(924, 98, 144, 'servico', 'SERVIÇO- INSTALAÇÃO LEITOR FACIAL CATRACA', 1, 250.00, 250.00, '2026-02-06 14:46:07', '2026-02-06 14:46:07'),
+(925, 100, 212, 'servico', 'INSTALAÇÃO CONFIGURAÇÃO E TREINAMENTO', 1, 1150.00, 1150.00, '2026-02-06 17:14:11', '2026-02-06 17:14:11'),
+(926, 100, 208, 'produto', 'KIT MOTOR PPA DZ INDUSTRIAL PORTÃO 2000KG 433MHZ', 1, 0.00, 0.00, '2026-02-06 17:14:11', '2026-02-06 17:14:11'),
+(927, 100, 209, 'produto', 'CREMALHEIRAS INDUSTRIAL', 6, 0.00, 0.00, '2026-02-06 17:14:11', '2026-02-06 17:14:11'),
+(928, 100, 210, 'produto', 'CONTROLADOR DE ACESSO WIFI INTELBRAS', 1, 0.00, 0.00, '2026-02-06 17:14:11', '2026-02-06 17:14:11'),
+(929, 100, 211, 'produto', 'ACIONADOR SAIDA SOBREPOR BT 3000', 1, 0.00, 0.00, '2026-02-06 17:14:11', '2026-02-06 17:14:11'),
+(930, 100, 6, 'produto', 'CABO DE REDE 100% COBRE', 30, 0.00, 0.00, '2026-02-06 17:14:11', '2026-02-06 17:14:11'),
+(931, 100, 135, 'produto', 'CABO FLEXIVEL 2,5MM PRETO CORFIO-METRO', 30, 0.00, 0.00, '2026-02-06 17:14:11', '2026-02-06 17:14:11'),
+(932, 100, 24, 'produto', 'VALOR TOTAL MATERIAL', 1, 4357.55, 4357.55, '2026-02-06 17:14:11', '2026-02-06 17:14:11');
 
 -- --------------------------------------------------------
 
@@ -9002,7 +9058,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('JXo97w5xYPcycadQXyuyDrAnI8SZGX8qPiDkuENM', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoic3RIUDZuekdPVWZCVzYwNjl3NVpsR3cwRG9rdXh2TklxdW5wclBkUCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6ODg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9maW5hbmNlaXJvL21vdmltZW50YWNhbz9kYXRhX2ZpbT0yMDI2LTAyLTA1JmRhdGFfaW5pY2lvPTIwMjYtMDItMDUiO3M6NToicm91dGUiO3M6MjM6ImZpbmFuY2Vpcm8ubW92aW1lbnRhY2FvIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1770385949);
+('DAqV6rcvT1JXalF5bPHykmp2NpvHQWXHfvx3QZms', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoic2pTNno2a3JRM2g3NGZlSUFFR21TbTYwcEZsY3ZUT0pmbEFTZjIxTyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO3M6NToicm91dGUiO3M6OToiZGFzaGJvYXJkIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1770407658);
 
 -- --------------------------------------------------------
 
@@ -9164,7 +9220,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `cliente_id`, `funcionario_id`, `name`, `email`, `tipo`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `primeiro_acesso`) VALUES
-(1, NULL, NULL, 'Felipe', 'felipehenriquegat@gmail.com', 'admin', NULL, '$2y$12$ESX/cLbMW0wbrmMdc3YIcelMUUTKa.NV9GQDMmoehERhrQ7p1UtiW', 'Yd8RERs34ubjKyTJxhQN1pR1MDL1mhQTlvVy5wHa9omHQBvjs8ATkUs6ay9X', '2026-01-03 17:12:07', '2026-01-08 20:08:07', 0),
+(1, NULL, NULL, 'Felipe', 'felipehenriquegat@gmail.com', 'admin', NULL, '$2y$12$ESX/cLbMW0wbrmMdc3YIcelMUUTKa.NV9GQDMmoehERhrQ7p1UtiW', 'KPjodf0A51pEnlnyw4qkL1gJGevs9arkJQkokHdLHFeU4kWnxyMV6jKI5ndv', '2026-01-03 17:12:07', '2026-01-08 20:08:07', 0),
 (15, NULL, 4, 'ROSSINI SANTOS', 'rossini@gmail.com', 'funcionario', NULL, '$2y$12$LahU3ifR2gG2jkzQ6zRQFOoyhqFCUfHppwY3RaK/Jb46NFT.tk.yO', 'QlX5hZ91h5kpB7z5Td7iH7gl67DVeYGwZ2EO0PKip36gFSkJpUeyEDuf5G4h', '2026-01-08 20:14:59', '2026-02-02 13:12:40', 0),
 (16, NULL, 5, 'CRISTIANO LOPES', 'teste@teste.com', 'funcionario', NULL, '$2y$12$3fNwVb5ZQ1BgDnJEy7wxSuPo792UcpQvfTdMtLOIHk07u3ltcxal.', 'Iaudh1pJx1rHABxNiEkCoqaL6omaGwxHf1CS9oYbUeTUjOM2kFL6LghgZ1EN', '2026-01-09 15:51:34', '2026-02-04 15:11:05', 0),
 (18, NULL, 6, 'JULIANA GAT', 'julianahenriquegat@gmail.com', 'administrativo', NULL, '$2y$12$k41yR3zKRyvcbFKhbf66iugMAmbpj8UHNteszrItnPoOYAho.1/6i', 'A2GYG9iuj5YAU1GePrLwT1EHCqkOSP93Q2pDcjmiTMc7mnwpwQjr6GQPbF9j', '2026-01-12 12:08:39', '2026-02-01 12:27:41', 0),
@@ -9782,13 +9838,13 @@ ALTER TABLE `cliente_user`
 -- AUTO_INCREMENT de tabela `cobrancas`
 --
 ALTER TABLE `cobrancas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4772;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4782;
 
 --
 -- AUTO_INCREMENT de tabela `cobranca_anexos`
 --
 ALTER TABLE `cobranca_anexos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT de tabela `contas`
@@ -9818,7 +9874,7 @@ ALTER TABLE `contas_fixas_pagar`
 -- AUTO_INCREMENT de tabela `contas_pagar`
 --
 ALTER TABLE `contas_pagar`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=977;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=991;
 
 --
 -- AUTO_INCREMENT de tabela `conta_pagar_anexos`
@@ -9890,7 +9946,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de tabela `movimentacoes_financeiras`
 --
 ALTER TABLE `movimentacoes_financeiras`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
 
 --
 -- AUTO_INCREMENT de tabela `notas_fiscais`
@@ -9914,7 +9970,7 @@ ALTER TABLE `orcamento_historicos`
 -- AUTO_INCREMENT de tabela `orcamento_itens`
 --
 ALTER TABLE `orcamento_itens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=922;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=933;
 
 --
 -- AUTO_INCREMENT de tabela `orcamento_pagamentos`
